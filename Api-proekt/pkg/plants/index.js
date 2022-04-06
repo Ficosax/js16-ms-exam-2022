@@ -15,4 +15,11 @@ const Plant = mongoose.model(
     'plants'
 );
 
+const create = async (pl) => {
+    let p = new Plant(pl);
+    return await p.save();
+};
 
+// cosnt getByData = async (id) => {
+//     return await Plant.findOne({_id: id});
+// };
